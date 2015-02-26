@@ -1,0 +1,19 @@
+def superCollatz(N):
+	"""returns a list of pairs [start value, number of steps to 1] for every unique Collatz sequence with starting point <=N"""
+	L = []
+	init = 2
+	step = 0
+	while init <= N:
+		x = init
+		while x != 1:
+			L.append(x)
+			if x % 2 == 0:
+				step = step + 1
+				x = x/2
+			elif x % 2 != 0:
+				step = step + 1
+				x = x*3+1
+		print([init, step])
+		while init in L:
+			init = init + 1
+		step = 0

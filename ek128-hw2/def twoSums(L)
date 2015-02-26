@@ -1,0 +1,10 @@
+def twoSums(L):
+	"""returns the separate sums of positive and of negative values in list L"""
+	Sum_pos = 0
+	Sum_neg = 0
+	for x in L:
+		if x > 0:
+			Sum_pos += x
+		elif x < 0:
+			Sum_neg += x
+	print(Sum_pos,Sum_neg)

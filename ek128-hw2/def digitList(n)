@@ -1,0 +1,6 @@
+def digitList(n):
+	s = str(n)
+	L = []
+	for x in s:
+		L.append(int(x))
+	print(L)
